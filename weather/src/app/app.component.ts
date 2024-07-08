@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { WeatherDisplayComponent } from './components/weather-display/weather-display.component';
+import { AirConditionsComponent } from './components/air-conditions/air-conditions.component';
 
 @Component({
   selector: 'app-root',
+  template: `
+    <app-search-bar></app-search-bar>
+    <app-weather-display></app-weather-display>
+    <app-air-conditions></app-air-conditions>
+  `,
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [SearchBarComponent, WeatherDisplayComponent, AirConditionsComponent]
 })
-export class AppComponent {
-  title = 'weather';
-}
+export class AppComponent {}
