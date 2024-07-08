@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles for background image */
+body {
+  @apply bg-cover bg-center h-screen w-screen;
+  background-image: url('/assets/weather.jpeg');
+}

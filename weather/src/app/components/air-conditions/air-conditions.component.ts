@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-air-conditions',
-  standalone: true,
-  imports: [],
   templateUrl: './air-conditions.component.html',
-  styleUrl: './air-conditions.component.css'
+  styleUrls: ['./air-conditions.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class AirConditionsComponent {
-
+  @Input() realFeel: number | null = null;
+  @Input() windSpeed: number | null = null;
+  @Input() uvIndex: number | null = null;
+  @Input() chanceOfRain: number | null = null;
 }

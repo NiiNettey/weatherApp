@@ -5,12 +5,16 @@ import { AirConditionsComponent } from './components/air-conditions/air-conditio
 
 @Component({
   selector: 'app-root',
-  template: `
-    <app-search-bar></app-search-bar>
-    <app-weather-display></app-weather-display>
-    <app-air-conditions></app-air-conditions>
-  `,
+  templateUrl: './app.component.html',
   standalone: true,
   imports: [SearchBarComponent, WeatherDisplayComponent, AirConditionsComponent]
 })
-export class AppComponent {}
+export class AppComponent {
+  location: string = 'Accra, Ghana';
+  temperature: number = 57;
+  weatherDescription: string = 'Cloudy';
+  chanceOfRain: number = 20;
+  realFeel: number = 30;
+  windSpeed: number = 0.2;
+  uvIndex: number = 3;
+}
