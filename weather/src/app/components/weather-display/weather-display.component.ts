@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-weather-display',
-  standalone: true,
-  imports: [],
   templateUrl: './weather-display.component.html',
-  styleUrl: './weather-display.component.css'
+  styleUrls: ['./weather-display.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class WeatherDisplayComponent {
-
+  @Input() location: string = '';
+  @Input() temperature: number | null = null;
+  @Input() weatherDescription: string = '';
+  @Input() chanceOfRain: number | null = null;
 }
